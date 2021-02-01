@@ -1,3 +1,6 @@
+;; I hate whitespace mode
+(setq prelude-whitespace nil)
+
 ;; Swap the keys in helm - use tab completion for completing.
 (define-key helm-map (kbd "TAB") #'helm-execute-persistent-action)
 (define-key helm-map (kbd "<tab>") #'helm-execute-persistent-action)
