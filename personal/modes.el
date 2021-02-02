@@ -6,6 +6,10 @@
 (define-key helm-map (kbd "<tab>") #'helm-execute-persistent-action)
 (define-key helm-map (kbd "C-z") #'helm-select-action)
 
+;; Helm Fuzzy Search
+(setq completion-styles `(basic partial-completion emacs22 initials
+                                ,(if (version<= emacs-version "27.0") 'helm-flex 'flex)))
+
 ;; Fuzzy Match in helm
 (setq helm-recentf-fuzzy-match t)
 (setq helm-buffers-fuzzy-matching t)
