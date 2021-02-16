@@ -11,7 +11,7 @@ semanticdb
 url
 ede-projects.el
 .DS_Store
-custom.el
+doc/prelude-cheatsheet.pdf
 places
 .smex-items
 savefile/

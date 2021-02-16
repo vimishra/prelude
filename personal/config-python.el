@@ -11,6 +11,15 @@
 (conda-env-initialize-eshell)
 ;; if you want auto-activation (see below for details), include:
 (conda-env-autoactivate-mode t)
+(setq conda-anaconda-home "/Users/vikasmis/anaconda3/")
 (setq
- conda-env-home-directory (expand-file-name "~/anaconda3/") ;; as in previous example; not required
- conda-env-subdirectory "envs")
+ conda-env-home-directory (expand-file-name "~/anaconda3/envs") ;; as in previous example; not required
+ conda-env-subdirectory "")
+
+;; Setup blacken
+(use-package blacken
+  :delight
+  :hook (python-mode . blacken-mode)
+  :custom (blacken-line-length 79))
+
+
