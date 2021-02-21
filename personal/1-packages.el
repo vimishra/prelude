@@ -6,4 +6,4 @@
 (define-prefix-command 'vm-map)
 (global-set-key (kbd "C-1") 'vm-map)
 
-(prelude-require-packages '(ag smart-mode-line switch-window org-download org-ac org-bullets deft helm-org-rifle elpy elpygen color-theme-sanityinc-tomorrow conda lsp-python-ms org-roam sr-speedbar switch-window swiper swiper-helm diredfl neotree pdf-tools use-package ivy-rich realgud deadgrep counsel-projectile blacken))
+(prelude-require-packages '(ag smart-mode-line switch-window org-download org-ac org-bullets deft helm-org-rifle elpy elpygen color-theme-sanityinc-tomorrow conda lsp-python-ms org-roam sr-speedbar switch-window swiper swiper-helm diredfl treemacs lsp-treemacs pdf-tools use-package ivy-rich realgud deadgrep counsel-projectile blacken))

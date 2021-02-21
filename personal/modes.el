@@ -22,9 +22,9 @@
 (add-hook 'dired-mode-hook 'diredfl-mode)
 
 ;; Neotree
-(require 'neotree)
-(global-set-key (kbd "C-c C-t") 'neotree-toggle)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+;; (require 'neotree)
+;; (global-set-key (kbd "C-c C-t") 'neotree-toggle)
+;; (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;; PDF Tools
 (pdf-loader-install)
@@ -59,3 +59,18 @@
 (require 'counsel-dash)
 (add-hook 'python-mode-hook (lambda () (setq-local counsel-dash-docsets '("Python 3"))))
 
+;; Enable treemacs
+(require 'treemacs)
+(define-key vm-map (kbd "t") 'treemacs)
+
+;; Deadgrep
+(global-set-key (kbd "<f5>") #'deadgrep)
+
+;; Use vterm with crux-visit-term
+(setq crux-term-buffer-name "vterm")
+
+(add-hook 'vterm-mode-hook (lambda ()
+			    ;; disable nlinum in shell
+			    (display-line-numbers-mode -1)
+			    ;; enable visual line mode
+			    (visual-line-mode 1)))
