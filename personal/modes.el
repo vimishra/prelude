@@ -77,3 +77,5 @@
 
 
 
+(global-set-key [M-f7] 'vterm-toggle)
+
