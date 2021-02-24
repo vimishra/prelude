@@ -11,6 +11,14 @@
  '(column-number-mode t)
  '(company-quickhelp-color-background "#4F4F4F")
  '(company-quickhelp-color-foreground "#DCDCCC")
+ '(crux-line-start-regex-alist
+   '((term-mode . "^[^#$%>
+]*[#$%>] ")
+     (eshell-mode . "^[^$
+]*$ ")
+     (org-mode . "^\\(*\\|[[:space:]]*\\)* ")
+     (default . "^[[:space:]]*")
+     (vterm-mode . "^[^❯]")))
  '(custom-enabled-themes '(sanityinc-tomorrow-bright))
  '(custom-safe-themes
    '("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" "1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default))
@@ -22,8 +30,9 @@
    '("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3"))
  '(org-agenda-files
    '("~/Documents/OrgNotes/Inbox.org" "~/Documents/OrgNotes/OrgRoam/daily/2021-02-01.org" "~/Documents/OrgNotes/OrgRoam/daily/2021-02-02.org" "~/Documents/OrgNotes/OrgRoam/daily/2021-02-10.org" "~/Documents/OrgNotes/OrgRoam/daily/2021-02-11.org" "~/Documents/OrgNotes/OrgRoam/daily/2021-02-12.org" "~/Documents/OrgNotes/OrgRoam/daily/2021-02-15.org" "~/Documents/OrgNotes/OrgRoam/20210201072610-debug_session_on_the_cattrip_issue.org" "~/Documents/OrgNotes/OrgRoam/20210203175432-20_paradoxes_that_are_true.org" "~/Documents/OrgNotes/OrgRoam/20210204142342-index.org" "~/Documents/OrgNotes/OrgRoam/20210205193938-senthil_mullainathan.org" "~/Documents/OrgNotes/OrgRoam/20210211091104-qed_and_symbolic_qed.org" "~/Documents/OrgNotes/OrgRoam/20210212062157-tiny_python_projects.org" "~/Documents/OrgNotes/OrgRoam/20210215221440-python_argparse_cookbook.org" "~/Documents/OrgNotes/ivy-todo.org" "~/Documents/OrgNotes/presentation.org"))
+ '(org-html-htmlize-output-type 'inline-css)
  '(package-selected-packages
-   '(vterm-toggle yaml-mode web-mode lsp-ui company-lsp json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window))
+   '(yaml-mode web-mode lsp-ui company-lsp json-mode js2-mode rainbow-mode elisp-slime-nav rainbow-delimiters company counsel swiper ivy exec-path-from-shell zop-to-char zenburn-theme which-key volatile-highlights undo-tree super-save smartrep smartparens operate-on-number nlinum move-text magit projectile imenu-anywhere hl-todo guru-mode gitignore-mode gitconfig-mode git-timemachine gist flycheck expand-region epl editorconfig easy-kill diminish diff-hl discover-my-major crux browse-kill-ring anzu ag ace-window))
  '(pdf-view-midnight-colors '("#DCDCCC" . "#383838"))
  '(size-indication-mode t)
  '(tool-bar-mode nil)

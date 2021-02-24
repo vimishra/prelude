@@ -66,16 +66,26 @@
 ;; Deadgrep
 (global-set-key (kbd "<f5>") #'deadgrep)
 
-;; Use vterm with crux-visit-term
-(setq crux-term-buffer-name "vterm")
+;; Define vterm -commenting for the time being
+;; (defun crux-vterm (buffer-name)
+;;   "Use ansi-term for `crux-visit-term-buffer'"
+;;   (vterm buffer-name))
 
-(add-hook 'vterm-mode-hook (lambda ()
-			    ;; disable nlinum in shell
-			    (display-line-numbers-mode -1)
-			    ;; enable visual line mode
-			    (visual-line-mode 1)))
+;; (defvar crux-term-buffer-name "vterm")
 
 
+;; (add-hook 'vterm-mode-hook (lambda ()
+;; 			     ;; disable nlinum in shell
+;; 			     (display-line-numbers-mode -1)
+;;                              ;; Set Ctrl-a to beginning of th eline
+;;                              (local-set-key (kbd "C-a") 'vterm-beginning-of-line)
+;; 			     ;; enable visual line mode
+;; 			     (visual-line-mode 1)))
 
-(global-set-key [M-f7] 'vterm-toggle)
 
+(add-hook 'term-mode-hook (lambda ()
+                            ;; disable nlinum in shell
+                            (display-line-numbers-mode -1)
+                            ;; enable visual line mode
+                            (visual-line-mode 1)))
+                            
