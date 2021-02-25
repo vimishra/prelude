@@ -21,6 +21,8 @@
             (linum-mode -1)
             ;; Set fill column to 100
             (setq fill-column 100)
+            ;; Enable spell checking in the org mode
+            (prelude-enable-flyspell)
             ;; Enable automatic line wrapping at fill column
             (auto-fill-mode t)))
 

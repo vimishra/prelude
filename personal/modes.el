@@ -88,4 +88,23 @@
                             (display-line-numbers-mode -1)
                             ;; enable visual line mode
                             (visual-line-mode 1)))
-                            
+
+;; Enable ligatures
+(mac-auto-operator-composition-mode)
+
+
+;; Use Option key as Meta
+(defun mac-switch-meta nil 
+  "switch meta between Option and Command"
+  (interactive)
+  (if (eq mac-option-modifier nil)
+      (progn
+	(setq mac-option-modifier 'meta)
+	(setq mac-command-modifier 'hyper)
+	)
+    (progn 
+      (setq mac-option-modifier nil)
+      (setq mac-command-modifier 'meta)
+      )))
+
+(mac-switch-meta)
