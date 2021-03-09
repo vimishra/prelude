@@ -74,13 +74,18 @@
 ;; (defvar crux-term-buffer-name "vterm")
 
 
-;; (add-hook 'vterm-mode-hook (lambda ()
-;; 			     ;; disable nlinum in shell
-;; 			     (display-line-numbers-mode -1)
-;;                              ;; Set Ctrl-a to beginning of th eline
-;;                              (local-set-key (kbd "C-a") 'vterm-beginning-of-line)
-;; 			     ;; enable visual line mode
-;; 			     (visual-line-mode 1)))
+(add-hook 'vterm-mode-hook (lambda ()
+ 			     ;; disable nlinum in shell
+ 			     (display-line-numbers-mode -1)
+                              ;; Set Ctrl-a to beginning of th eline
+                              (local-set-key (kbd "C-a") 'vterm-beginning-of-line)
+ 			     ;; enable visual line mode
+ 			      (visual-line-mode 1)))
+(define-key vm-map (kbd "v") 'vterm-toggle)
+
+
+;; Make meta the right key from the beginning
+(prelude-swap-meta-and-super)
 
 
 (add-hook 'term-mode-hook (lambda ()
